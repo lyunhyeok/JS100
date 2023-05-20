@@ -7,3 +7,10 @@ function compareArray(my_string, letter) {
     return answer.join("");
     
 }
+
+
+function compareArray(my_string, letter) {
+    // split 메서드로 letter을 인자로 구분하여 배열을 만듬
+    const answer = my_string.split(letter).join('')
+    return answer;
+}
