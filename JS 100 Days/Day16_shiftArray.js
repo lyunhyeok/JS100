@@ -12,11 +12,15 @@
 function solution(numbers, direction) {
     if(direction === 'left')
         numbers.push(numbers.shift());
-    else{
-        let answer = numbers.pop();
-        numbers.unshift(answer);
+    else
+        numbers.unshift(numbers.pop());
         //numbers.splice(0,0,answer);
-    }
     
+    return numbers;
+}
+
+// 위의 구문을 3항 연산자로 변경
+function solution(numbers, direction) {
+    direction === 'right' ? numbers.unshift(numbers.pop()) : numbers.push(numbers.shift());
     return numbers;
 }
